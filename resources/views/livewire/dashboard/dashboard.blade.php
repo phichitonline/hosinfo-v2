@@ -11,7 +11,7 @@
     <div class="page-title-wrapper">
         <div class="page-title-heading">
             <div class="page-title-icon">
-                <i class="fa fa-ambulance icon-gradient bg-warm-flame"></i>
+                <i class="fa fa-ambulance icon-gradient bg-malibu-beach"></i>
             </div>
             <div>
                 <h3>@yield('pagetitle')</h3>
@@ -88,9 +88,9 @@
                     </div>
                 </div>
                 <div class="widget-progress-wrapper">
-                    <div class="progress-bar-lg progress-bar-animated progress">
+                    <div class="progress-bar-lg progress-bar-animated-alt progress">
                         <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="{{ $pt_opd_vnm * 100 / $pt_opd_vn_lastm }}"
-                            aria-valuemin="0" aria-valuemax="100" style="width: {{ $pt_opd_vnm * 100 / $pt_opd_vn_lastm }}%;">
+                            aria-valuemin="0" aria-valuemax="100" style="width: {{ $pt_opd_hnm * 100 / $pt_opd_vn_lastm }}%;">
                         </div>
                     </div>
                     <div class="progress-sub-label text-white">เดือนนี้ {{ number_format($pt_opd_hnm,0) }} คน/{{ number_format($pt_opd_vnm,0) }} ครั้ง</div>
@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 <div class="widget-progress-wrapper">
-                    <div class="progress-bar-lg progress">
+                    <div class="progress-bar-lg progress-bar-animated-alt progress">
                         <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="{{ $pt_er_vn * 100 / $ptm_er_vn_lastm }}"
                             aria-valuemin="0" aria-valuemax="100" style="width: {{ $pt_er_vn * 100 / $ptm_er_vn_lastm }}%;">
                         </div>
@@ -344,12 +344,253 @@
     </div>
 </div>
 
+
+{{-- โรคติดต่อที่ต้องเฝ้าระวัง --}}
+
+<div class="mb-3 card">
+    <div class="card-header-tab card-header">
+        <div class="card-header-title">
+            <i class="header-icon fa fa-tint icon-gradient bg-love-kiss"></i>
+            <h4>โรคติดต่อที่ต้องเฝ้าระวัง</h4>
+        </div>
+        <div class="btn-actions-pane-right">
+            <div class="nav">
+                <a href="#tab-eg-44" data-bs-toggle="tab" class="btn-pill btn-wide border-0 btn-transition btn btn-outline-alternate second-tab-toggle-alt">
+                    COVID-19
+                </a>
+                <a href="#tab-eg-66" data-bs-toggle="tab" class="ms-1 btn-pill btn-wide border-0 btn-transition btn btn-outline-warning second-tab-toggle-alt">
+                    ท้องร่วง
+                </a>
+                <a href="#tab-eg-55" data-bs-toggle="tab" class="ms-1 btn-pill btn-wide border-0 btn-transition active btn btn-outline-danger">
+                    ไข้เลือดออก
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade active show" id="tab-eg-55">
+            <div class="widget-chart p-0">
+                <div id="bar-vertical-candle-lg"></div>
+                <div class="widget-chart-content">
+                    <div class="widget-description mt-0 text-warning">
+                        <i class="fa fa-arrow-left"></i>
+                        <span class="ps-1">175.5%</span>
+                        <span class="text-muted opacity-8 ps-1">increased server resources</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-2 card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="widget-content">
+                            <div class="widget-content-outer">
+                                <div class="widget-content-wrapper">
+                                    <div class="widget-content-left">
+                                        <div class="widget-numbers fsize-3 text-muted">63%</div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <div class="text-muted opacity-6">Generated Leads</div>
+                                    </div>
+                                </div>
+                                <div class="widget-progress-wrapper mt-1">
+                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                        <div class="progress-bar bg-danger"
+                                            role="progressbar" aria-valuenow="63" aria-valuemin="0"
+                                            aria-valuemax="100" style="width: 63%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="widget-content">
+                            <div class="widget-content-outer">
+                                <div class="widget-content-wrapper">
+                                    <div class="widget-content-left">
+                                        <div class="widget-numbers fsize-3 text-muted">32%</div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <div class="text-muted opacity-6">Submitted Tickers</div>
+                                    </div>
+                                </div>
+                                <div class="widget-progress-wrapper mt-1">
+                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                        <div  class="progress-bar bg-success"
+                                            role="progressbar" aria-valuenow="32" aria-valuemin="0"
+                                            aria-valuemax="100" style="width: 32%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="widget-content">
+                            <div class="widget-content-outer">
+                                <div class="widget-content-wrapper">
+                                    <div class="widget-content-left">
+                                        <div class="widget-numbers fsize-3 text-muted">71%</div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <div class="text-muted opacity-6">Server Allocation</div>
+                                    </div>
+                                </div>
+                                <div class="widget-progress-wrapper mt-1">
+                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                        <div class="progress-bar bg-primary"
+                                            role="progressbar" aria-valuenow="71" aria-valuemin="0"
+                                            aria-valuemax="100" style="width: 71%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="widget-content">
+                            <div class="widget-content-outer">
+                                <div class="widget-content-wrapper">
+                                    <div class="widget-content-left">
+                                        <div class="widget-numbers fsize-3 text-muted">41%</div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <div class="text-muted opacity-6">Generated Leads</div>
+                                    </div>
+                                </div>
+                                <div class="widget-progress-wrapper mt-1">
+                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                        <div class="progress-bar bg-warning"
+                                            role="progressbar" aria-valuenow="41" aria-valuemin="0"
+                                            aria-valuemax="100" style="width: 41%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tab-eg-44">
+            <div class="pt-2 card-body">
+                COVID-19
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tab-eg-66">
+            <div class="widget-chart p-0">
+                <div id="dashboard-sparkline-37"></div>
+                <div class="widget-chart-content">
+                    <div class="widget-description mt-0 text-success">
+                        <i class="fa fa-arrow-up"></i>
+                        <span class="pe-1">37.2%</span>
+                        <span class="text-muted opacity-8">performance increase</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-2 card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="widget-content">
+                            <div class="widget-content-outer">
+                                <div class="widget-content-wrapper">
+                                    <div class="widget-content-left">
+                                        <div class="widget-numbers fsize-3 text-muted">23%</div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <div class="text-muted opacity-6">Deploys</div>
+                                    </div>
+                                </div>
+                                <div class="widget-progress-wrapper mt-1">
+                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                        <div class="progress-bar bg-warning"
+                                            role="progressbar" aria-valuenow="23" aria-valuemin="0"
+                                            aria-valuemax="100" style="width: 23%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="widget-content">
+                            <div class="widget-content-outer">
+                                <div class="widget-content-wrapper">
+                                    <div class="widget-content-left">
+                                        <div class="widget-numbers fsize-3 text-muted">76%</div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <div class="text-muted opacity-6">Traffic</div>
+                                    </div>
+                                </div>
+                                <div class="widget-progress-wrapper mt-1">
+                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                        <div class="progress-bar bg-info"
+                                            role="progressbar" aria-valuenow="76" aria-valuemin="0"
+                                            aria-valuemax="100" style="width: 76%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="widget-content">
+                            <div class="widget-content-outer">
+                                <div class="widget-content-wrapper">
+                                    <div class="widget-content-left">
+                                        <div class="widget-numbers fsize-3 text-muted">83%</div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <div class="text-muted opacity-6">Servers Load</div>
+                                    </div>
+                                </div>
+                                <div class="widget-progress-wrapper mt-1">
+                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                        <div class="progress-bar bg-danger"
+                                            role="progressbar" aria-valuenow="83" aria-valuemin="0"
+                                            aria-valuemax="100" style="width: 83%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="widget-content">
+                            <div class="widget-content-outer">
+                                <div class="widget-content-wrapper">
+                                    <div class="widget-content-left">
+                                        <div class="widget-numbers fsize-3 text-muted">48%</div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <div class="text-muted opacity-6">Reportd Bugs</div>
+                                    </div>
+                                </div>
+                                <div class="widget-progress-wrapper mt-1">
+                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                        <div class="progress-bar bg-alternate"
+                                            role="progressbar" aria-valuenow="48" aria-valuemin="0"
+                                            aria-valuemax="100" style="width: 48%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 {{-- ผู้ป่วยใน --}}
 
 <div class="mbg-3 h-auto ps-0 pe-0 bg-transparent no-border card-header">
-    <div class="card-header-title fsize-2 text-capitalize fw-normal"><i class="fa fa-bed btn-icon-wrapper"></i> ข้อมูลผู้ป่วยใน</div>
+    <div class="card-header-title fsize-2 text-capitalize fw-normal"><i class="fa fa-bed btn-icon-wrapper"></i> ผู้ป่วยใน</div>
     <div class="btn-actions-pane-right text-capitalize actions-icon-btn">
-        <button class="btn btn-link btn-sm">View Details</button>
+        <a href="{{ route('stat.ipd') }}" class="btn btn-link btn-sm">View Detail <i class="fa fa-angle-double-right btn-icon-wrapper"></i></a>
     </div>
 </div>
 
@@ -357,19 +598,19 @@
     <div class="tabs-lg-alternate card-header">
         <ul class="nav nav-justified">
             <li class="nav-item">
-                <a href="#tab-minimal-1" data-bs-toggle="tab" class="nav-link minimal-tab-btn-1">
+                <a href="#tab-minimal-1" data-bs-toggle="tab" class="nav-link active minimal-tab-btn-1">
                     <div class="widget-number">
-                        <span>9 | 15</span>
+                        <span><h1>ผู้ป่วยในวันนี้</h1></span>
                     </div>
                     <div class="tab-subheading">
-                        รับใหม่ | จำหน่าย
+                        จำนวนเตียงทั้งหมด 148 เตียง
                     </div>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#tab-minimal-2" data-bs-toggle="tab" class="nav-link active minimal-tab-btn-2">
+                <a href="#tab-minimal-2" data-bs-toggle="tab" class="nav-link minimal-tab-btn-2">
                     <div class="widget-number text-danger">
-                        <span>79</span>
+                        <span><h1><b>79</b></h1></span>
                     </div>
                     <div class="tab-subheading">
                         Admit อยู่
@@ -379,7 +620,7 @@
             <li class="nav-item">
                 <a href="#tab-minimal-3" data-bs-toggle="tab" class="nav-link minimal-tab-btn-3">
                     <div class="widget-number text-success">
-                        <span>69</span>
+                        <span><h1><b>65</b></h1></span>
                     </div>
                     <div class="tab-subheading">
                         เตียงว่าง
@@ -389,166 +630,1003 @@
         </ul>
     </div>
     <div class="tab-content">
-        <div class="tab-pane" id="tab-minimal-1">
-            <div class="card-body">
-                รับใหม่/จำหน่าย
-            </div>
+        <div class="tab-pane fade active show" id="tab-minimal-1">
+
         </div>
-        <div class="tab-pane fade active show" id="tab-minimal-2">
+        <div class="tab-pane fade" id="tab-minimal-2">
             <div class="card-body">
-                Admit อยู่
+                <div class="card-header">
+                    <div class="card-header-title font-size-lg text-capitalize fw-normal">
+                        สถานะตึกผู้ป่วยใน (Admit อยู่)
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="align-middle text-truncate mb-0 table table-borderless table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center"></th>
+                                <th>ตึก</th>
+                                <th>Admit อยู่</th>
+                                <th></th>
+                                <th class="text-center">ครองเตียง</th>
+                                <th class="text-center"></th>
+                                <th class="text-center">สถานะ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center text-muted" style="width: 80px;">03</td>
+                                <td>
+                                    <a href="javascript:void(0)">ตึกสูติกรรม</a>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0)">12/18</a>
+                                </td>
+                                <td style="width: 80px;">
+                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/2.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/3.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/4.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/5.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/9.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/7.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/8.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span class="pe-2 opacity-6">
+                                        <i class="fa fa-business-time"></i>
+                                    </span>
+                                    12 Dec
+                                </td>
+                                <td class="text-center" style="width: 200px;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pe-2">
+                                                    <div class="widget-numbers fsize-1 text-info">67%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            aria-valuenow="67" aria-valuemin="0"
+                                                            aria-valuemax="100" style="width: 67%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="badge rounded-pill bg-info">Canceled</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-muted" style="width: 80px;">04</td>
+                                <td>
+                                    <a href="javascript:void(0)">ตึก 1</a>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0)">31/35</a>
+                                </td>
+                                <td style="width: 80px;">
+                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/2.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/3.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/4.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/5.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/9.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/7.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/8.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span class="pe-2 opacity-6">
+                                        <i class="fa fa-business-time"></i>
+                                    </span>
+                                    12 Dec
+                                </td>
+                                <td class="text-center" style="width: 200px;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pe-2">
+                                                    <div class="widget-numbers fsize-1 text-danger">88%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-danger" role="progressbar"
+                                                            aria-valuenow="88" aria-valuemin="0"
+                                                            aria-valuemax="100" style="width: 88%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="badge rounded-pill bg-danger">Canceled</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-muted" style="width: 80px;">05</td>
+                                <td>
+                                    <a href="javascript:void(0)">ตึก 2</a>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0)">25/35</a>
+                                </td>
+                                <td style="width: 80px;">
+                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/2.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/3.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/4.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/5.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/9.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/7.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/8.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span class="pe-2 opacity-6">
+                                        <i class="fa fa-business-time"></i>
+                                    </span>
+                                    12 Dec
+                                </td>
+                                <td class="text-center" style="width: 200px;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pe-2">
+                                                    <div class="widget-numbers fsize-1 text-warning">71%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-warning" role="progressbar"
+                                                            aria-valuenow="71" aria-valuemin="0"
+                                                            aria-valuemax="100" style="width: 71%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="badge rounded-pill bg-warning">On Hold</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-muted" style="width: 80px;">06</td>
+                                <td>
+                                    <a href="javascript:void(0)">ตึก 3</a>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0)">11/16</a>
+                                </td>
+                                <td style="width: 80px;">
+                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/2.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/3.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/4.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/5.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/9.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/7.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/8.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span class="pe-2 opacity-6">
+                                        <i class="fa fa-business-time"></i>
+                                    </span>
+                                    12 Dec
+                                </td>
+                                <td class="text-center" style="width: 200px;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pe-2">
+                                                    <div class="widget-numbers fsize-1 text-info">69%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            aria-valuenow="69" aria-valuemin="0"
+                                                            aria-valuemax="100" style="width: 69%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="badge rounded-pill bg-info">In Progress</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-muted" style="width: 80px;">07</td>
+                                <td>
+                                    <a href="javascript:void(0)">ตึก 4</a>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0)">6/12</a>
+                                </td>
+                                <td style="width: 80px;">
+                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/2.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/3.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/4.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/5.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/9.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/7.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/8.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span class="pe-2 opacity-6">
+                                        <i class="fa fa-business-time"></i>
+                                    </span>
+                                    12 Dec
+                                </td>
+                                <td class="text-center" style="width: 200px;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pe-2">
+                                                    <div class="widget-numbers fsize-1 text-success">50%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-success" role="progressbar"
+                                                            aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100" style="width: 50%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="badge rounded-pill bg-success">Completed</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-block p-4 text-center card-footer">
+                    <a href="{{ route('stat.ipd') }}" class="mb-2 me-2 btn-icon btn-pill btn btn-outline-danger">
+                        <i class="fa fa-bed btn-icon-wrapper"></i>ข้อมูลผู้ป่วยในเพิ่มเติม
+                    </a>
+                </div>
             </div>
         </div>
         <div class="tab-pane fade" id="tab-minimal-3">
             <div class="card-body">
-                เตียงว่าง
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-12 col-md-7">
-        <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <div class="card-shadow-primary mb-3 widget-chart widget-chart2 text-start card">
-                    <div class="widget-chat-wrapper-outer">
-                        <div class="widget-chart-content">
-                            <h6 class="widget-subheading">Income</h6>
-                            <div class="widget-chart-flex">
-                                <div class="widget-numbers mb-0 w-100">
-                                    <div class="widget-chart-flex">
-                                        <div class="fsize-4">
-                                            <small class="opacity-5">$</small>
-                                            5,456
+                <div class="card-header">
+                    <div class="card-header-title font-size-lg text-capitalize fw-normal">
+                        สถานะตึกผู้ป่วยใน (เตียงว่าง)
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="align-middle text-truncate mb-0 table table-borderless table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center"></th>
+                                <th>ตึก</th>
+                                <th>Admit อยู่</th>
+                                <th class="text-center">เตียงว่าง</th>
+                                <th class="text-center">สามัญ</th>
+                                <th class="text-center">พิเศษ</th>
+                                <th class="text-center"></th>
+                                <th class="text-center">พร้อมรับ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center text-muted" style="width: 80px;">03</td>
+                                <td>
+                                    <a href="javascript:void(0)">ตึกสูติกรรม</a>
+                                </td>
+                                <td style="width: 80px;">
+                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                            </div>
                                         </div>
-                                        <div class="ms-auto">
-                                            <div class="widget-title ms-auto font-size-lg fw-normal text-muted">
-                                                <span class="text-success ps-2">+14%</span>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/2.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/3.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/4.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/5.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/9.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/7.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm avatar-icon-add">
+                                            <div class="avatar-icon">
+                                                <i>+</i>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="card-shadow-primary mb-3 widget-chart widget-chart2 text-start card">
-                    <div class="widget-chat-wrapper-outer">
-                        <div class="widget-chart-content">
-                            <h6 class="widget-subheading">Expenses</h6>
-                            <div class="widget-chart-flex">
-                                <div class="widget-numbers mb-0 w-100">
-                                    <div class="widget-chart-flex">
-                                        <div class="fsize-4 text-danger">
-                                            <small class="opacity-5 text-muted">$</small>
-                                            4,764
-                                        </div>
-                                        <div class="ms-auto">
-                                            <div class="widget-title ms-auto font-size-lg fw-normal text-muted">
-                                                <span class="text-danger ps-2">
-                                                    <span class="pe-1">
-                                                        <i class="fa fa-angle-up"></i>
-                                                    </span>
-                                                    8%
-                                                </span>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">6</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">4</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">2</a>
+                                </td>
+                                <td class="text-center" style="width: 200px;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pe-2">
+                                                    <div class="widget-numbers fsize-1 text-info">33%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            aria-valuenow="33" aria-valuemin="0"
+                                                            aria-valuemax="100" style="width: 33%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="card-shadow-primary mb-3 widget-chart widget-chart2 text-start card">
-                    <div class="widget-chat-wrapper-outer">
-                        <div class="widget-chart-content">
-                            <h6 class="widget-subheading">Spendings</h6>
-                            <div class="widget-chart-flex">
-                                <div class="widget-numbers mb-0 w-100">
-                                    <div class="widget-chart-flex">
-                                        <div class="fsize-4">
-                                            <span class="text-success pe-2">
-                                                <i class="fa fa-angle-down"></i>
-                                            </span>
-                                            <small class="opacity-5">$</small>
-                                            1.5M
+                                </td>
+                                <td class="text-center">
+                                    <div class="badge rounded-pill bg-info">6</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-muted" style="width: 80px;">03</td>
+                                <td>
+                                    <a href="javascript:void(0)">ตึกสูติกรรม</a>
+                                </td>
+                                <td style="width: 80px;">
+                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                            </div>
                                         </div>
-                                        <div class="ms-auto">
-                                            <div class="widget-title ms-auto font-size-lg fw-normal text-muted">
-                                                <span class="text-success ps-2">
-                                                    <span class="pe-1">
-                                                        <i class="fa fa-angle-down"></i>
-                                                    </span>
-                                                    15%
-                                                </span>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/2.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/3.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/4.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/5.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/9.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/7.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm avatar-icon-add">
+                                            <div class="avatar-icon">
+                                                <i>+</i>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="card-shadow-primary mb-3 widget-chart widget-chart2 text-start card">
-                    <div class="widget-chat-wrapper-outer">
-                        <div class="widget-chart-content">
-                            <h6 class="widget-subheading">Totals</h6>
-                            <div class="widget-chart-flex">
-                                <div class="widget-numbers mb-0 w-100">
-                                    <div class="widget-chart-flex">
-                                        <div class="fsize-4">
-                                            <small class="opacity-5">$</small>
-                                            31,564
-                                        </div>
-                                        <div class="ms-auto">
-                                            <div class="widget-title ms-auto font-size-lg fw-normal text-muted">
-                                                <span class="text-warning ps-2">+76%</span>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">6</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">4</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">2</a>
+                                </td>
+                                <td class="text-center" style="width: 200px;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pe-2">
+                                                    <div class="widget-numbers fsize-1 text-info">33%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            aria-valuenow="33" aria-valuemin="0"
+                                                            aria-valuemax="100" style="width: 33%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12 col-md-5">
-        <div class="mb-3 card">
-            <div class="card-body">
-                <div class="widget-chart widget-chart2 text-start p-0">
-                    <div class="widget-chat-wrapper-outer">
-                        <div class="widget-chart-content">
-                            <div class="widget-chart-flex">
-                                <div class="widget-numbers mt-0">
-                                    <div class="widget-chart-flex">
-                                        <div>
-                                            <small class="opacity-5">$</small>
-                                            <span>628</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="badge rounded-pill bg-info">6</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-muted" style="width: 80px;">03</td>
+                                <td>
+                                    <a href="javascript:void(0)">ตึกสูติกรรม</a>
+                                </td>
+                                <td style="width: 80px;">
+                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                            </div>
                                         </div>
-                                        <div class="widget-title ms-2 opacity-5 font-size-lg text-muted">Total Expenses Today</div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/2.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/3.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/4.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/5.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/9.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/7.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm avatar-icon-add">
+                                            <div class="avatar-icon">
+                                                <i>+</i>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="widget-chart-wrapper widget-chart-wrapper-lg opacity-10 m-0">
-                            <div id="dashboard-sparkline-carousel-3"></div>
-                        </div>
-                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">6</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">4</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">2</a>
+                                </td>
+                                <td class="text-center" style="width: 200px;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pe-2">
+                                                    <div class="widget-numbers fsize-1 text-info">33%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            aria-valuenow="33" aria-valuemin="0"
+                                                            aria-valuemax="100" style="width: 33%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="badge rounded-pill bg-info">6</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-muted" style="width: 80px;">03</td>
+                                <td>
+                                    <a href="javascript:void(0)">ตึกสูติกรรม</a>
+                                </td>
+                                <td style="width: 80px;">
+                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/2.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/3.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/4.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/5.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/9.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/7.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm avatar-icon-add">
+                                            <div class="avatar-icon">
+                                                <i>+</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">6</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">4</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">2</a>
+                                </td>
+                                <td class="text-center" style="width: 200px;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pe-2">
+                                                    <div class="widget-numbers fsize-1 text-info">33%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            aria-valuenow="33" aria-valuemin="0"
+                                                            aria-valuemax="100" style="width: 33%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="badge rounded-pill bg-info">6</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center text-muted" style="width: 80px;">03</td>
+                                <td>
+                                    <a href="javascript:void(0)">ตึกสูติกรรม</a>
+                                </td>
+                                <td style="width: 80px;">
+                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/2.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/3.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/4.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/5.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/9.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon">
+                                                <img src="{{ asset('assets/images/avatars/7.jpg') }}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm avatar-icon-add">
+                                            <div class="avatar-icon">
+                                                <i>+</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">6</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">4</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)">2</a>
+                                </td>
+                                <td class="text-center" style="width: 200px;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pe-2">
+                                                    <div class="widget-numbers fsize-1 text-info">33%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            aria-valuenow="33" aria-valuemin="0"
+                                                            aria-valuemax="100" style="width: 33%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="badge rounded-pill bg-info">6</div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-block p-4 text-center card-footer">
+                    <a href="{{ route('stat.ipd') }}" class="mb-2 me-2 btn-icon btn-pill btn btn-outline-danger">
+                        <i class="fa fa-bed btn-icon-wrapper"></i>ข้อมูลผู้ป่วยในเพิ่มเติม
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="main-card mb-3 card">
+<div class="row">
+    <div class="col-sm-12 col-md-7">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="card mb-3 widget-content">
+                    <div class="widget-content-wrapper">
+                        <div class="widget-content-left">
+                            <div class="widget-heading">รับใหม่วันนี้</div>
+                            {{-- <div class="widget-subheading">(เมื่อวาน 12 เตียง)</div> --}}
+                        </div>
+                        <div class="widget-content-right">
+                            <div class="widget-numbers text-danger">
+                                <span>15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="card mb-3 widget-content">
+                    <div class="widget-content-wrapper">
+                        <div class="widget-content-left">
+                            <div class="widget-heading">สิทธิ์ชำระเงินและเบิกได้</div>
+                        </div>
+                        <div class="widget-content-right">
+                            <div class="widget-numbers text-primary">
+                                <span>15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="card mb-3 widget-content">
+                    <div class="widget-content-wrapper">
+                        <div class="widget-content-left">
+                            <div class="widget-heading">จำหน่ายวันนี้</div>
+                        </div>
+                        <div class="widget-content-right">
+                            <div class="widget-numbers text-success">
+                                <span>15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="card mb-3 widget-content">
+                    <div class="widget-content-wrapper">
+                        <div class="widget-content-left">
+                            <div class="widget-heading">สิทธิ์ UC</div>
+                        </div>
+                        <div class="widget-content-right">
+                            <div class="widget-numbers text-primary">
+                                <span>15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="card mb-3 widget-content">
+                    <div class="widget-content-wrapper">
+                        <div class="widget-content-left">
+                            <div class="widget-heading">อัตราการครองเตียง</div>
+                        </div>
+                        <div class="widget-content-right">
+                            <div class="widget-numbers text-primary">
+                                <span>15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="card mb-3 widget-content">
+                    <div class="widget-content-wrapper">
+                        <div class="widget-content-left">
+                            <div class="widget-heading">สิทธิ์อื่นๆ</div>
+                        </div>
+                        <div class="widget-content-right">
+                            <div class="widget-numbers text-primary">
+                                <span>15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-5">
+        <div class="card mb-3 widget-chart widget-chart2 text-start w-100">
+            <div class="widget-chat-wrapper-outer">
+                <div class="widget-chart-content pt-3 pe-3 ps-3">
+                    <div class="widget-chart-flex">
+                        <div class="widget-numbers">
+                            <div class="widget-chart-flex">
+                                <div>
+                                    <small class="opacity-5"></small>
+                                    <span>61.50</span>
+                                </div>
+                                <div class="widget-title ms-2 opacity-5 font-size-lg text-muted">อัตราการครองเตียง</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-chart-wrapper widget-chart-wrapper-lg opacity-10 m-0 mb-4">
+                    <div id="dashboard-sparkline-carousel-3"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{{-- <div class="main-card mb-3 card">
     <div class="card-header">
         <div class="card-header-title font-size-lg text-capitalize fw-normal">
             Company Agents Status
@@ -768,20 +1846,104 @@
         <a href="#" class="mb-2 me-2 btn-icon btn-pill btn btn-outline-danger">
             <i class="fa fa-bed btn-icon-wrapper"></i>ข้อมูลผู้ป่วยใน
         </a>
-        {{-- <button class="btn-pill btn-shadow btn-wide fsize-1 btn btn-dark btn-lg">
-            <span class="me-2 opacity-7">
-                <i class="fa fa-cog fa-spin"></i>
-            </span>
-            <span class="me-1">ข้อมูลผู้ป่วยใน</span>
-        </button> --}}
     </div>
-</div>
+</div> --}}
 
 
 <div class="mbg-3 h-auto ps-0 pe-0 bg-transparent no-border card-header">
-    <div class="card-header-title fsize-2 text-capitalize fw-normal">Target Section</div>
+    <div class="card-header-title fsize-2 text-capitalize fw-normal"><i class="fa fa-tasks btn-icon-wrapper"></i> ผู้ป่วยนัดวันนี้</div>
     <div class="btn-actions-pane-right text-capitalize actions-icon-btn">
-        <button class="btn btn-link btn-sm">View Details</button>
+        <a href="#" class="btn btn-link btn-sm">View Detail <i class="fa fa-angle-double-right btn-icon-wrapper"></i></a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3 widget-chart widget-chart2 text-start">
+            <div class="widget-chat-wrapper-outer">
+                <div class="widget-chart-content">
+                    <div class="widget-chart-flex">
+                        <div class="widget-title">นัดทั่วไป</div>
+                        <div class="widget-subtitle text-muted">รับบริการแล้ว 111</div>
+                    </div>
+                    <div class="widget-chart-flex">
+                        <div class="widget-numbers">
+                            <b>222</b>
+                        </div>
+                        <div class="widget-description ms-auto text-success">
+                            <i class="fa fa-angle-down "></i>
+                            <span class="ps-1">45%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-progress-wrapper">
+                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                        <div class="progress-bar bg-success"  role="progressbar" aria-valuenow="45"
+                            aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                        </div>
+                    </div>
+                    {{-- <div class="progress-sub-label">เดือนนี้ 33 คน/ 44 ครั้ง</div> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3 widget-chart widget-chart2 text-start">
+            <div class="widget-chat-wrapper-outer">
+                <div class="widget-chart-content">
+                    <div class="widget-chart-flex">
+                        <div class="widget-title">นัดคลินิกพิเศษ</div>
+                        <div class="widget-subtitle text-muted">รับบริการแล้ว 211</div>
+                    </div>
+                    <div class="widget-chart-flex">
+                        <div class="widget-numbers">
+                            <b>234</b>
+                        </div>
+                        <div class="widget-description ms-auto text-warning">
+                            <span class="pe-2">66.5%</span>
+                            <i class="fa fa-arrow-left "></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-progress-wrapper">
+                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85"
+                            aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                        </div>
+                    </div>
+                    {{-- <div class="progress-sub-label">เดือนนี้</div> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3 widget-chart widget-chart2 text-start">
+            <div class="widget-chat-wrapper-outer">
+                <div class="widget-chart-content">
+                    <div class="widget-chart-flex">
+                        <div class="widget-title">นัดทันตกรรม</div>
+                        <div class="widget-subtitle text-danger opacity-7">รับบริการแล้ว 45</div>
+                    </div>
+                    <div class="widget-chart-flex">
+                        <div class="widget-numbers">
+                            <b>87</b>
+                        </div>
+                        <div class="widget-description ms-auto text-danger">
+                            <span class="pe-1">45</span>
+                            <i class="fa fa-angle-up "></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-progress-wrapper">
+                    <div class="progress-bar-sm progress-bar-animated progress">
+                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="47"
+                            aria-valuemin="0" aria-valuemax="100" style="width: 47%;">
+                        </div>
+                    </div>
+                    {{-- <div class="progress-sub-label">เดือนนี้</div> --}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -878,96 +2040,6 @@
                     <div class="widget-content-left fsize-1">
                         <div class="text-muted opacity-6">Totals Target</div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <div class="card mb-3 widget-chart widget-chart2 text-start">
-            <div class="widget-chat-wrapper-outer">
-                <div class="widget-chart-content">
-                    <div class="widget-chart-flex">
-                        <div class="widget-title">ผู้รับบริการวันนี้</div>
-                        <div class="widget-subtitle text-muted">เดือนที่แล้ว </div>
-                    </div>
-                    <div class="widget-chart-flex">
-                        <div class="widget-numbers">
-                            <b>222</b>
-                        </div>
-                        <div class="widget-description ms-auto text-success">
-                            <i class="fa fa-angle-down "></i>
-                            <span class="ps-1">45%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget-progress-wrapper">
-                    <div class="progress-bar-sm progress-bar-animated-alt progress">
-                        <div class="progress-bar bg-success"  role="progressbar" aria-valuenow="45"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                        </div>
-                    </div>
-                    <div class="progress-sub-label">เดือนนี้ 33 คน/ 44 ครั้ง</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card mb-3 widget-chart widget-chart2 text-start">
-            <div class="widget-chat-wrapper-outer">
-                <div class="widget-chart-content">
-                    <div class="widget-chart-flex">
-                        <div class="widget-title">Admit วันนี้</div>
-                        <div class="widget-subtitle text-muted">เดือนที่แล้ว</div>
-                    </div>
-                    <div class="widget-chart-flex">
-                        <div class="widget-numbers">
-                            <b>234</b>
-                        </div>
-                        <div class="widget-description ms-auto text-warning">
-                            <span class="pe-2">66.5%</span>
-                            <i class="fa fa-arrow-left "></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget-progress-wrapper">
-                    <div class="progress-bar-sm progress-bar-animated-alt progress">
-                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-                        </div>
-                    </div>
-                    <div class="progress-sub-label">เดือนนี้</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card mb-3 widget-chart widget-chart2 text-start">
-            <div class="widget-chat-wrapper-outer">
-                <div class="widget-chart-content">
-                    <div class="widget-chart-flex">
-                        <div class="widget-title">อุบัติเหตุ</div>
-                        <div class="widget-subtitle text-danger opacity-7">เดือนที่แล้ว</div>
-                    </div>
-                    <div class="widget-chart-flex">
-                        <div class="widget-numbers">
-                            <b>87</b>
-                        </div>
-                        <div class="widget-description ms-auto text-danger">
-                            <span class="pe-1">45</span>
-                            <i class="fa fa-angle-up "></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget-progress-wrapper">
-                    <div class="progress-bar-sm progress-bar-animated progress">
-                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="47"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 47%;">
-                        </div>
-                    </div>
-                    <div class="progress-sub-label">เดือนนี้</div>
                 </div>
             </div>
         </div>
