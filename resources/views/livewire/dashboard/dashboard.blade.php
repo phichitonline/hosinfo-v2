@@ -75,14 +75,14 @@
                 <div class="widget-chart-content text-white">
                     <div class="widget-chart-flex">
                         <div class="widget-title">ผู้ป่วยนอกวันนี้</div>
-                        <div class="widget-subtitle text-white opacity-7">เดือนที่แล้ว {{ @(number_format($pt_opd_vn_lastm,0)) }}</div>
+                        <div class="widget-subtitle text-white opacity-7">เดือนที่แล้ว {{ number_format($pt_opd_vn_lastm,0) }}</div>
                     </div>
                     <div class="widget-chart-flex">
                         <div class="widget-numbers">
                             <b>{{ $pt_opd_today }}</b>
                         </div>
                         <div class="widget-description ms-auto text-white">
-                            <span class="pe-1">{{ @(number_format($pt_opd_hnm * 100 / $pt_opd_vn_lastm,0)) }}%</span>
+                            <span class="pe-1">{{ number_format(@($pt_opd_hnm * 100 / $pt_opd_vn_lastm),0) }}%</span>
                             <i class="fa fa-angle-up "></i>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                             aria-valuemin="0" aria-valuemax="100" style="width: {{ @($pt_opd_hnm * 100 / $pt_opd_vn_lastm) }}%;">
                         </div>
                     </div>
-                    <div class="progress-sub-label text-white">เดือนนี้ {{ @(number_format($pt_opd_hnm,0)) }} คน/{{ @(number_format($pt_opd_vnm,0)) }} ครั้ง</div>
+                    <div class="progress-sub-label text-white">เดือนนี้ {{ number_format($pt_opd_hnm,0) }} คน/{{ number_format($pt_opd_vnm,0) }} ครั้ง</div>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
                 <div class="widget-chart-content text-white">
                     <div class="widget-chart-flex">
                         <div class="widget-title">ผู้ป่วยในวันนี้</div>
-                        <div class="widget-subtitle text-white">เดือนที่แล้ว {{ @(number_format($ptm_ipd_an_lastm,0)) }}</div>
+                        <div class="widget-subtitle text-white">เดือนที่แล้ว {{ number_format($ptm_ipd_an_lastm,0) }}</div>
                     </div>
                     <div class="widget-chart-flex">
                         <div class="widget-numbers">
@@ -114,7 +114,7 @@
                         </div>
                         <div class="widget-description ms-auto text-white">
                             <i class="fa fa-angle-up "></i>
-                            <span class="ps-1">{{ @(number_format($ptm_ipd_hn * 100 / $ptm_ipd_an_lastm,0)) }}%</span>
+                            <span class="ps-1">{{ number_format(@($ptm_ipd_hn * 100 / $ptm_ipd_an_lastm),0) }}%</span>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                             aria-valuemin="0" aria-valuemax="100" style="width: {{ @($ptm_ipd_an * 100 / $ptm_ipd_an_lastm) }}%;">
                         </div>
                     </div>
-                    <div class="progress-sub-label text-white">เดือนนี้ {{ @(number_format($ptm_ipd_hn,0)) }} คน/{{ @(number_format($ptm_ipd_an,0)) }} ครั้ง</div>
+                    <div class="progress-sub-label text-white">เดือนนี้ {{ number_format($ptm_ipd_hn,0) }} คน/{{ number_format($ptm_ipd_an,0) }} ครั้ง</div>
                 </div>
             </div>
         </div>
@@ -138,7 +138,7 @@
                 <div class="widget-chart-content text-white">
                     <div class="widget-chart-flex">
                         <div class="widget-title">ผู้ป่วยอุบัติเหตุวันนี้</div>
-                        <div class="widget-subtitle text-white">เดือนที่แล้ว {{ @(number_format($ptm_er_vn_lastm,0)) }}</div>
+                        <div class="widget-subtitle text-white">เดือนที่แล้ว {{ number_format($ptm_er_vn_lastm,0) }}</div>
                     </div>
                     <div class="widget-chart-flex">
                         <div class="widget-numbers">
@@ -146,7 +146,7 @@
                         </div>
                         <div class="widget-description ms-auto text-white">
                             <i class="fa fa-arrow-right "></i>
-                            <span class="ps-1">{{ @(number_format($pt_er_hn * 100 / $ptm_er_vn_lastm,0)) }}%</span>
+                            <span class="ps-1">{{ number_format(@($pt_er_hn * 100 / $ptm_er_vn_lastm),0) }}%</span>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                             aria-valuemin="0" aria-valuemax="100" style="width: {{ @($pt_er_vn * 100 / $ptm_er_vn_lastm) }}%;">
                         </div>
                     </div>
-                    <div class="progress-sub-label text-white">เดือนนี้ {{ @(number_format($pt_er_hn,0)) }} คน/{{ @(number_format($pt_er_vn,0)) }} ครั้ง</div>
+                    <div class="progress-sub-label text-white">เดือนนี้ {{ number_format($pt_er_hn,0) }} คน/{{ number_format($pt_er_vn,0) }} ครั้ง</div>
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@
             <div class="widget-content-wrapper text-white">
                 <div class="widget-content-left">
                     <div class="widget-heading">ทันตกรรมวันนี้</div>
-                    <div class="widget-subheading">เดือนนี้ {{ @(number_format($pt_opd_hnm,0)) }} คน/{{ @(number_format($pt_opd_vnm,0)) }} ครั้ง</div>
+                    <div class="widget-subheading">เดือนนี้ {{ number_format($pt_opd_hnm,0) }} คน/{{ number_format($pt_opd_vnm,0) }} ครั้ง</div>
                 </div>
                 <div class="widget-content-right">
                     <div class="widget-numbers text-white">
@@ -186,7 +186,7 @@
             <div class="widget-content-wrapper text-white">
                 <div class="widget-content-left">
                     <div class="widget-heading">แพทย์แผนไทย</div>
-                    <div class="widget-subheading">เดือนนี้ {{ @(number_format($pt_opd_hnm,0)) }} คน/{{ @(number_format($pt_opd_vnm,0)) }} ครั้ง</div>
+                    <div class="widget-subheading">เดือนนี้ {{ number_format($pt_opd_hnm,0) }} คน/{{ number_format($pt_opd_vnm,0) }} ครั้ง</div>
                 </div>
                 <div class="widget-content-right">
                     <div class="widget-numbers">
@@ -201,7 +201,7 @@
             <div class="widget-content-wrapper text-white">
                 <div class="widget-content-left">
                     <div class="widget-heading">ผ่าตัดวันนี้</div>
-                    <div class="widget-subheading">เดือนนี้ {{ @(number_format($pt_opd_hnm,0)) }} คน/{{ @(number_format($pt_opd_vnm,0)) }} ครั้ง</div>
+                    <div class="widget-subheading">เดือนนี้ {{ number_format($pt_opd_hnm,0) }} คน/{{ number_format($pt_opd_vnm,0) }} ครั้ง</div>
                 </div>
                 <div class="widget-content-right">
                     <div class="widget-numbers text-white">
@@ -219,7 +219,7 @@
             <div class="widget-content-wrapper">
                 <div class="widget-content-left">
                     <div class="widget-heading">LAB วันนี้</div>
-                    <div class="widget-subheading">เดือนนี้ {{ @(number_format($pt_opd_hnm,0)) }} คน/{{ @(number_format($pt_opd_vnm,0)) }} ครั้ง</div>
+                    <div class="widget-subheading">เดือนนี้ {{ number_format($pt_opd_hnm,0) }} คน/{{ number_format($pt_opd_vnm,0) }} ครั้ง</div>
                 </div>
                 <div class="widget-content-right">
                     <div class="widget-numbers text-success">
@@ -234,7 +234,7 @@
             <div class="widget-content-wrapper">
                 <div class="widget-content-left">
                     <div class="widget-heading">X-RAY วันนี้</div>
-                    <div class="widget-subheading">เดือนนี้ {{ @(number_format($pt_opd_hnm,0)) }} คน/{{ @(number_format($pt_opd_vnm,0)) }} ครั้ง</div>
+                    <div class="widget-subheading">เดือนนี้ {{ number_format($pt_opd_hnm,0) }} คน/{{ number_format($pt_opd_vnm,0) }} ครั้ง</div>
                 </div>
                 <div class="widget-content-right">
                     <div class="widget-numbers text-primary">
@@ -249,7 +249,7 @@
             <div class="widget-content-wrapper">
                 <div class="widget-content-left">
                     <div class="widget-heading">กายภาพบำบัดวันนี้</div>
-                    <div class="widget-subheading">เดือนนี้ {{ @(number_format($pt_opd_hnm,0)) }} คน/{{ @(number_format($pt_opd_vnm,0)) }} ครั้ง</div>
+                    <div class="widget-subheading">เดือนนี้ {{ number_format($pt_opd_hnm,0) }} คน/{{ number_format($pt_opd_vnm,0) }} ครั้ง</div>
                 </div>
                 <div class="widget-content-right">
                     <div class="widget-numbers text-danger">
