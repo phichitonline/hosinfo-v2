@@ -146,14 +146,14 @@
                         </div>
                         <div class="widget-description ms-auto text-white">
                             <i class="fa fa-arrow-right "></i>
-                            <span class="ps-1">0%</span>
+                            <span class="ps-1">10%</span>
                         </div>
                     </div>
                 </div>
                 <div class="widget-progress-wrapper">
                     <div class="progress-bar-lg progress-bar-animated-alt progress">
-                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="{{ @($pt_er_vn * 100 / $ptm_er_vn_lastm) }}"
-                            aria-valuemin="0" aria-valuemax="100" style="width: {{ @($pt_er_vn * 100 / $ptm_er_vn_lastm) }}%;">
+                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="10"
+                            aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
                         </div>
                     </div>
                     <div class="progress-sub-label text-white">เดือนนี้ {{ number_format($pt_er_hn,0) }} คน/{{ number_format($pt_er_vn,0) }} ครั้ง</div>
