@@ -146,7 +146,7 @@
                         </div>
                         <div class="widget-description ms-auto text-white">
                             <i class="fa fa-arrow-right "></i>
-                            <span class="ps-1">{{ number_format(@($pt_er_hn * 100 / $ptm_er_vn_lastm),0) }}%</span>
+                            <span class="ps-1">0%</span>
                         </div>
                     </div>
                 </div>
